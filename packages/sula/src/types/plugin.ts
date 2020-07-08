@@ -59,7 +59,7 @@ export type RenderPluginFunction = (ctx: RenderCtx) => React.ReactElement;
 export type RenderPlugin = {
   type: string | RenderPluginFunction;
   props: Record<string, any>;
-  functionProps: Record<string, (ctx: RenderCtx) => string>;
+  functionProps?: Record<string, (ctx: RenderCtx) => string>;
   action?: ActionPlugin | ActionPlugin[];
 } | string | RenderPluginFunction;
 
@@ -68,7 +68,7 @@ export type FieldPluginFunction = (ctx: FormCtx) => React.ReactElement;
 export type FieldPlugin = {
   type: string | FieldPluginFunction;
   props: Record<string, any>;
-  functionProps: Record<string, (ctx: FormCtx) => string>;
+  functionProps?: Record<string, (ctx: FormCtx) => string>;
   action?: ActionPlugin | ActionPlugin[];
 } | string | FieldPluginFunction;
 
